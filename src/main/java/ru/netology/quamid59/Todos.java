@@ -12,7 +12,11 @@ public class Todos {
      * @return Возвращает новый массив, который выглядит как тот, что мы передали,
      * но с добавлением нового элемента в конец
      */
+
     Task[] addToArray(Task[] current, Task task) {
+        if (task == null) {
+            return current;
+        }
         Task[] tmp = new Task[current.length + 1];
         for (int i = 0; i < current.length; i++) {
             tmp[i] = current[i];
